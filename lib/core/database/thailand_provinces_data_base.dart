@@ -1,4 +1,3 @@
-import 'dart:developer' as developer;
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -8,6 +7,8 @@ import 'package:sqflite/sqflite.dart';
 
 class ThailandProvincesDatabase {
   static late Database _db;
+
+  Database get db => _db;
 
   static Future<void> init() async {
     // provide a path to the database file
