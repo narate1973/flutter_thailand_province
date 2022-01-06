@@ -1,7 +1,7 @@
 name: thailand_province_phn
-description: A new Flutter project.
+description: This package group all thailand province database.
 version: 0.0.1
-homepage:
+homepage: https://github.com/narate1973/flutter_thailand_province.git
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
