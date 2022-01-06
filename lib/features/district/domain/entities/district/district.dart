@@ -1,12 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part '../provice.freezed.dart';
+part 'district.freezed.dart';
 
 @freezed
-class Provice with _$Provice {
-  factory Provice({
+class District with _$District {
+  factory District({
     required String nameTH,
     required String nameEN,
     required int id,
-  }) = _Provice;
+    required int districtId,
+  }) = _District;
 }
