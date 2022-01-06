@@ -1,3 +1,3 @@
-## 0.0.1
+## [0.0.1] - 2022-01-06
 
-* TODO: Describe initial release.
+* First release, please check out README.md.
