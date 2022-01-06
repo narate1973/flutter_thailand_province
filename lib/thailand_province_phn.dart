@@ -1,9 +1,7 @@
 library thailand_province_phn;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:thailand_province_phn/core/database/thailand_provinces_data_base.dart';
 
-  static const int testNumber = 1;
+class ThailandProvices {
+  static void init() async => ThailandProvincesDatabase.init();
 }
