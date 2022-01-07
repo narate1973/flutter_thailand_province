@@ -3,7 +3,6 @@ import 'package:thailand_province_phn/features/subdistrict/domain/entities/entit
 
 abstract class SubdistrictRepositoryInterface {
   Future<List<Subdistrict>> getByDistrict(int districtId);
-  Future<List<Subdistrict>> getByProvince();
   Future<List<Subdistrict>> getAll();
 }
 
@@ -22,10 +21,4 @@ class SubdistrictRepository implements SubdistrictRepositoryInterface {
   Future<List<Subdistrict>> getByDistrict(int districtId) => _dataSource
       .getSubdistrictsFromDistrict(districtId)
       .then((value) => Subdistrict.fromListModel(value));
-
-  @override
-  Future<List<Subdistrict>> getByProvince() {
-    // TODO: implement getByProvince
-    throw UnimplementedError();
-  }
 }

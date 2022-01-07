@@ -1,8 +1,8 @@
-import 'package:thailand_province_phn/features/provinces/data/datasources/provinces_datasource.dart';
-import 'package:thailand_province_phn/features/provinces/domain/entities/provice/provice.dart';
+import '../../data/datasources/provinces_datasource.dart';
+import '../entities/province/province.dart';
 
 abstract class ProvinceRepositoryInterface {
-  Future<List<Provice>> getAll();
+  Future<List<Province>> getAll();
   // Future<dynamic> getByDistrict(String district);
   // Future<dynamic> getBySubDistrict(String subDistrict);
 }
@@ -14,9 +14,9 @@ class ProvinceRepository implements ProvinceRepositoryInterface {
   final ProvincesDatasource _provincesDatasource;
 
   @override
-  Future<List<Provice>> getAll() => _provincesDatasource
+  Future<List<Province>> getAll() => _provincesDatasource
       .getAll()
-      .then((value) => Provice.fromListModel(value));
+      .then((value) => Province.fromListModel(value));
 
   // @override
   // Future getByDistrict(String district) {

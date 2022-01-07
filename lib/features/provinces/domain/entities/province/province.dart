@@ -1,20 +1,20 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:thailand_province_phn/features/provinces/data/models/province/province_model.dart';
 
-part 'provice.freezed.dart';
+part 'province.freezed.dart';
 
 @freezed
-class Provice with _$Provice {
-  factory Provice({
+class Province with _$Province {
+  factory Province({
     required String nameTH,
     required String nameEN,
     required int id,
-  }) = _Provice;
+  }) = _Province;
 
-  static List<Provice> fromListModel(List<ProvinceModel> list) =>
-      list.map((data) => Provice.fromModel(data)).toList();
+  static List<Province> fromListModel(List<ProvinceModel> list) =>
+      list.map((data) => Province.fromModel(data)).toList();
 
-  factory Provice.fromModel(ProvinceModel model) => Provice(
+  factory Province.fromModel(ProvinceModel model) => Province(
         nameTH: model.nameTH,
         nameEN: model.nameEN,
         id: model.id,

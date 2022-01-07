@@ -1,5 +1,5 @@
-import 'package:thailand_province_phn/core/database/thailand_provinces_data_base.dart';
-import 'package:thailand_province_phn/features/subdistrict/data/models/models.dart';
+import '../../../../core/database/thailand_provinces_data_base.dart';
+import '../models/subdistrict/subdistrict_model.dart';
 
 abstract class SubdistrictDataSourceInterface {
   Future<List<SubdistrictModel>> getSubdistrictsFromDistrict(int districtId);

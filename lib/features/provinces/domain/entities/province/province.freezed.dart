@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'provice.dart';
+part of 'province.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,12 +15,12 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$ProviceTearOff {
-  const _$ProviceTearOff();
+class _$ProvinceTearOff {
+  const _$ProvinceTearOff();
 
-  _Provice call(
+  _Province call(
       {required String nameTH, required String nameEN, required int id}) {
-    return _Provice(
+    return _Province(
       nameTH: nameTH,
       nameEN: nameEN,
       id: id,
@@ -29,32 +29,33 @@ class _$ProviceTearOff {
 }
 
 /// @nodoc
-const $Provice = _$ProviceTearOff();
+const $Province = _$ProvinceTearOff();
 
 /// @nodoc
-mixin _$Provice {
+mixin _$Province {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ProviceCopyWith<Provice> get copyWith => throw _privateConstructorUsedError;
+  $ProvinceCopyWith<Province> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ProviceCopyWith<$Res> {
-  factory $ProviceCopyWith(Provice value, $Res Function(Provice) then) =
-      _$ProviceCopyWithImpl<$Res>;
+abstract class $ProvinceCopyWith<$Res> {
+  factory $ProvinceCopyWith(Province value, $Res Function(Province) then) =
+      _$ProvinceCopyWithImpl<$Res>;
   $Res call({String nameTH, String nameEN, int id});
 }
 
 /// @nodoc
-class _$ProviceCopyWithImpl<$Res> implements $ProviceCopyWith<$Res> {
-  _$ProviceCopyWithImpl(this._value, this._then);
+class _$ProvinceCopyWithImpl<$Res> implements $ProvinceCopyWith<$Res> {
+  _$ProvinceCopyWithImpl(this._value, this._then);
 
-  final Provice _value;
+  final Province _value;
   // ignore: unused_field
-  final $Res Function(Provice) _then;
+  final $Res Function(Province) _then;
 
   @override
   $Res call({
@@ -80,21 +81,21 @@ class _$ProviceCopyWithImpl<$Res> implements $ProviceCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$ProviceCopyWith<$Res> implements $ProviceCopyWith<$Res> {
-  factory _$ProviceCopyWith(_Provice value, $Res Function(_Provice) then) =
-      __$ProviceCopyWithImpl<$Res>;
+abstract class _$ProvinceCopyWith<$Res> implements $ProvinceCopyWith<$Res> {
+  factory _$ProvinceCopyWith(_Province value, $Res Function(_Province) then) =
+      __$ProvinceCopyWithImpl<$Res>;
   @override
   $Res call({String nameTH, String nameEN, int id});
 }
 
 /// @nodoc
-class __$ProviceCopyWithImpl<$Res> extends _$ProviceCopyWithImpl<$Res>
-    implements _$ProviceCopyWith<$Res> {
-  __$ProviceCopyWithImpl(_Provice _value, $Res Function(_Provice) _then)
-      : super(_value, (v) => _then(v as _Provice));
+class __$ProvinceCopyWithImpl<$Res> extends _$ProvinceCopyWithImpl<$Res>
+    implements _$ProvinceCopyWith<$Res> {
+  __$ProvinceCopyWithImpl(_Province _value, $Res Function(_Province) _then)
+      : super(_value, (v) => _then(v as _Province));
 
   @override
-  _Provice get _value => super._value as _Provice;
+  _Province get _value => super._value as _Province;
 
   @override
   $Res call({
@@ -102,7 +103,7 @@ class __$ProviceCopyWithImpl<$Res> extends _$ProviceCopyWithImpl<$Res>
     Object? nameEN = freezed,
     Object? id = freezed,
   }) {
-    return _then(_Provice(
+    return _then(_Province(
       nameTH: nameTH == freezed
           ? _value.nameTH
           : nameTH // ignore: cast_nullable_to_non_nullable
@@ -121,8 +122,8 @@ class __$ProviceCopyWithImpl<$Res> extends _$ProviceCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Provice implements _Provice {
-  _$_Provice({required this.nameTH, required this.nameEN, required this.id});
+class _$_Province implements _Province {
+  _$_Province({required this.nameTH, required this.nameEN, required this.id});
 
   @override
   final String nameTH;
@@ -133,14 +134,14 @@ class _$_Provice implements _Provice {
 
   @override
   String toString() {
-    return 'Provice(nameTH: $nameTH, nameEN: $nameEN, id: $id)';
+    return 'Province(nameTH: $nameTH, nameEN: $nameEN, id: $id)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Provice &&
+            other is _Province &&
             const DeepCollectionEquality().equals(other.nameTH, nameTH) &&
             const DeepCollectionEquality().equals(other.nameEN, nameEN) &&
             const DeepCollectionEquality().equals(other.id, id));
@@ -155,15 +156,15 @@ class _$_Provice implements _Provice {
 
   @JsonKey(ignore: true)
   @override
-  _$ProviceCopyWith<_Provice> get copyWith =>
-      __$ProviceCopyWithImpl<_Provice>(this, _$identity);
+  _$ProvinceCopyWith<_Province> get copyWith =>
+      __$ProvinceCopyWithImpl<_Province>(this, _$identity);
 }
 
-abstract class _Provice implements Provice {
-  factory _Provice(
+abstract class _Province implements Province {
+  factory _Province(
       {required String nameTH,
       required String nameEN,
-      required int id}) = _$_Provice;
+      required int id}) = _$_Province;
 
   @override
   String get nameTH;
@@ -173,6 +174,6 @@ abstract class _Provice implements Provice {
   int get id;
   @override
   @JsonKey(ignore: true)
-  _$ProviceCopyWith<_Provice> get copyWith =>
+  _$ProvinceCopyWith<_Province> get copyWith =>
       throw _privateConstructorUsedError;
 }
