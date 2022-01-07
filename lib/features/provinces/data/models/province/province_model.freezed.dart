@@ -23,7 +23,9 @@ class _$ProvinceModelTearOff {
   const _$ProvinceModelTearOff();
 
   _ProvinceModel call(
-      {required String nameTH, required String nameEN, required int id}) {
+      {@JsonKey(name: 'name_th') required String nameTH,
+      @JsonKey(name: 'name_en') required String nameEN,
+      @JsonKey(name: 'id') required int id}) {
     return _ProvinceModel(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -41,8 +43,11 @@ const $ProvinceModel = _$ProvinceModelTearOff();
 
 /// @nodoc
 mixin _$ProvinceModel {
+  @JsonKey(name: 'name_th')
   String get nameTH => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name_en')
   String get nameEN => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
   int get id => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,7 +61,10 @@ abstract class $ProvinceModelCopyWith<$Res> {
   factory $ProvinceModelCopyWith(
           ProvinceModel value, $Res Function(ProvinceModel) then) =
       _$ProvinceModelCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id});
+  $Res call(
+      {@JsonKey(name: 'name_th') String nameTH,
+      @JsonKey(name: 'name_en') String nameEN,
+      @JsonKey(name: 'id') int id});
 }
 
 /// @nodoc
@@ -98,7 +106,10 @@ abstract class _$ProvinceModelCopyWith<$Res>
           _ProvinceModel value, $Res Function(_ProvinceModel) then) =
       __$ProvinceModelCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id});
+  $Res call(
+      {@JsonKey(name: 'name_th') String nameTH,
+      @JsonKey(name: 'name_en') String nameEN,
+      @JsonKey(name: 'id') int id});
 }
 
 /// @nodoc
@@ -139,16 +150,21 @@ class __$ProvinceModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProvinceModel implements _ProvinceModel {
   _$_ProvinceModel(
-      {required this.nameTH, required this.nameEN, required this.id});
+      {@JsonKey(name: 'name_th') required this.nameTH,
+      @JsonKey(name: 'name_en') required this.nameEN,
+      @JsonKey(name: 'id') required this.id});
 
   factory _$_ProvinceModel.fromJson(Map<String, dynamic> json) =>
       _$$_ProvinceModelFromJson(json);
 
   @override
+  @JsonKey(name: 'name_th')
   final String nameTH;
   @override
+  @JsonKey(name: 'name_en')
   final String nameEN;
   @override
+  @JsonKey(name: 'id')
   final int id;
 
   @override
@@ -186,18 +202,21 @@ class _$_ProvinceModel implements _ProvinceModel {
 
 abstract class _ProvinceModel implements ProvinceModel {
   factory _ProvinceModel(
-      {required String nameTH,
-      required String nameEN,
-      required int id}) = _$_ProvinceModel;
+      {@JsonKey(name: 'name_th') required String nameTH,
+      @JsonKey(name: 'name_en') required String nameEN,
+      @JsonKey(name: 'id') required int id}) = _$_ProvinceModel;
 
   factory _ProvinceModel.fromJson(Map<String, dynamic> json) =
       _$_ProvinceModel.fromJson;
 
   @override
+  @JsonKey(name: 'name_th')
   String get nameTH;
   @override
+  @JsonKey(name: 'name_en')
   String get nameEN;
   @override
+  @JsonKey(name: 'id')
   int get id;
   @override
   @JsonKey(ignore: true)

@@ -8,6 +8,6 @@ class District with _$District {
     required String nameTH,
     required String nameEN,
     required int id,
-    required int districtId,
+    required int provinceId,
   }) = _District;
 }

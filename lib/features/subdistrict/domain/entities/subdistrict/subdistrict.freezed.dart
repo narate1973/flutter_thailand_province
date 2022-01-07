@@ -22,12 +22,12 @@ class _$SubdistrictTearOff {
       {required String nameTH,
       required String nameEN,
       required int id,
-      required int proviceId}) {
+      required int districtId}) {
     return _Subdistrict(
       nameTH: nameTH,
       nameEN: nameEN,
       id: id,
-      proviceId: proviceId,
+      districtId: districtId,
     );
   }
 }
@@ -40,7 +40,7 @@ mixin _$Subdistrict {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
-  int get proviceId => throw _privateConstructorUsedError;
+  int get districtId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubdistrictCopyWith<Subdistrict> get copyWith =>
@@ -52,7 +52,7 @@ abstract class $SubdistrictCopyWith<$Res> {
   factory $SubdistrictCopyWith(
           Subdistrict value, $Res Function(Subdistrict) then) =
       _$SubdistrictCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id, int proviceId});
+  $Res call({String nameTH, String nameEN, int id, int districtId});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$SubdistrictCopyWithImpl<$Res> implements $SubdistrictCopyWith<$Res> {
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? proviceId = freezed,
+    Object? districtId = freezed,
   }) {
     return _then(_value.copyWith(
       nameTH: nameTH == freezed
@@ -83,9 +83,9 @@ class _$SubdistrictCopyWithImpl<$Res> implements $SubdistrictCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      proviceId: proviceId == freezed
-          ? _value.proviceId
-          : proviceId // ignore: cast_nullable_to_non_nullable
+      districtId: districtId == freezed
+          ? _value.districtId
+          : districtId // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -98,7 +98,7 @@ abstract class _$SubdistrictCopyWith<$Res>
           _Subdistrict value, $Res Function(_Subdistrict) then) =
       __$SubdistrictCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id, int proviceId});
+  $Res call({String nameTH, String nameEN, int id, int districtId});
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class __$SubdistrictCopyWithImpl<$Res> extends _$SubdistrictCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? proviceId = freezed,
+    Object? districtId = freezed,
   }) {
     return _then(_Subdistrict(
       nameTH: nameTH == freezed
@@ -131,9 +131,9 @@ class __$SubdistrictCopyWithImpl<$Res> extends _$SubdistrictCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      proviceId: proviceId == freezed
-          ? _value.proviceId
-          : proviceId // ignore: cast_nullable_to_non_nullable
+      districtId: districtId == freezed
+          ? _value.districtId
+          : districtId // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -146,7 +146,7 @@ class _$_Subdistrict implements _Subdistrict {
       {required this.nameTH,
       required this.nameEN,
       required this.id,
-      required this.proviceId});
+      required this.districtId});
 
   @override
   final String nameTH;
@@ -155,11 +155,11 @@ class _$_Subdistrict implements _Subdistrict {
   @override
   final int id;
   @override
-  final int proviceId;
+  final int districtId;
 
   @override
   String toString() {
-    return 'Subdistrict(nameTH: $nameTH, nameEN: $nameEN, id: $id, proviceId: $proviceId)';
+    return 'Subdistrict(nameTH: $nameTH, nameEN: $nameEN, id: $id, districtId: $districtId)';
   }
 
   @override
@@ -170,7 +170,8 @@ class _$_Subdistrict implements _Subdistrict {
             const DeepCollectionEquality().equals(other.nameTH, nameTH) &&
             const DeepCollectionEquality().equals(other.nameEN, nameEN) &&
             const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.proviceId, proviceId));
+            const DeepCollectionEquality()
+                .equals(other.districtId, districtId));
   }
 
   @override
@@ -179,7 +180,7 @@ class _$_Subdistrict implements _Subdistrict {
       const DeepCollectionEquality().hash(nameTH),
       const DeepCollectionEquality().hash(nameEN),
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(proviceId));
+      const DeepCollectionEquality().hash(districtId));
 
   @JsonKey(ignore: true)
   @override
@@ -192,7 +193,7 @@ abstract class _Subdistrict implements Subdistrict {
       {required String nameTH,
       required String nameEN,
       required int id,
-      required int proviceId}) = _$_Subdistrict;
+      required int districtId}) = _$_Subdistrict;
 
   @override
   String get nameTH;
@@ -201,7 +202,7 @@ abstract class _Subdistrict implements Subdistrict {
   @override
   int get id;
   @override
-  int get proviceId;
+  int get districtId;
   @override
   @JsonKey(ignore: true)
   _$SubdistrictCopyWith<_Subdistrict> get copyWith =>

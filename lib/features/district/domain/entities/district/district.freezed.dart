@@ -22,12 +22,12 @@ class _$DistrictTearOff {
       {required String nameTH,
       required String nameEN,
       required int id,
-      required int districtId}) {
+      required int provinceId}) {
     return _District(
       nameTH: nameTH,
       nameEN: nameEN,
       id: id,
-      districtId: districtId,
+      provinceId: provinceId,
     );
   }
 }
@@ -40,7 +40,7 @@ mixin _$District {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
   int get id => throw _privateConstructorUsedError;
-  int get districtId => throw _privateConstructorUsedError;
+  int get provinceId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DistrictCopyWith<District> get copyWith =>
@@ -51,7 +51,7 @@ mixin _$District {
 abstract class $DistrictCopyWith<$Res> {
   factory $DistrictCopyWith(District value, $Res Function(District) then) =
       _$DistrictCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call({String nameTH, String nameEN, int id, int provinceId});
 }
 
 /// @nodoc
@@ -67,7 +67,7 @@ class _$DistrictCopyWithImpl<$Res> implements $DistrictCopyWith<$Res> {
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? districtId = freezed,
+    Object? provinceId = freezed,
   }) {
     return _then(_value.copyWith(
       nameTH: nameTH == freezed
@@ -82,9 +82,9 @@ class _$DistrictCopyWithImpl<$Res> implements $DistrictCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      districtId: districtId == freezed
-          ? _value.districtId
-          : districtId // ignore: cast_nullable_to_non_nullable
+      provinceId: provinceId == freezed
+          ? _value.provinceId
+          : provinceId // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -95,7 +95,7 @@ abstract class _$DistrictCopyWith<$Res> implements $DistrictCopyWith<$Res> {
   factory _$DistrictCopyWith(_District value, $Res Function(_District) then) =
       __$DistrictCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call({String nameTH, String nameEN, int id, int provinceId});
 }
 
 /// @nodoc
@@ -112,7 +112,7 @@ class __$DistrictCopyWithImpl<$Res> extends _$DistrictCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? districtId = freezed,
+    Object? provinceId = freezed,
   }) {
     return _then(_District(
       nameTH: nameTH == freezed
@@ -127,9 +127,9 @@ class __$DistrictCopyWithImpl<$Res> extends _$DistrictCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      districtId: districtId == freezed
-          ? _value.districtId
-          : districtId // ignore: cast_nullable_to_non_nullable
+      provinceId: provinceId == freezed
+          ? _value.provinceId
+          : provinceId // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -142,7 +142,7 @@ class _$_District implements _District {
       {required this.nameTH,
       required this.nameEN,
       required this.id,
-      required this.districtId});
+      required this.provinceId});
 
   @override
   final String nameTH;
@@ -151,11 +151,11 @@ class _$_District implements _District {
   @override
   final int id;
   @override
-  final int districtId;
+  final int provinceId;
 
   @override
   String toString() {
-    return 'District(nameTH: $nameTH, nameEN: $nameEN, id: $id, districtId: $districtId)';
+    return 'District(nameTH: $nameTH, nameEN: $nameEN, id: $id, provinceId: $provinceId)';
   }
 
   @override
@@ -167,7 +167,7 @@ class _$_District implements _District {
             const DeepCollectionEquality().equals(other.nameEN, nameEN) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.districtId, districtId));
+                .equals(other.provinceId, provinceId));
   }
 
   @override
@@ -176,7 +176,7 @@ class _$_District implements _District {
       const DeepCollectionEquality().hash(nameTH),
       const DeepCollectionEquality().hash(nameEN),
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(districtId));
+      const DeepCollectionEquality().hash(provinceId));
 
   @JsonKey(ignore: true)
   @override
@@ -189,7 +189,7 @@ abstract class _District implements District {
       {required String nameTH,
       required String nameEN,
       required int id,
-      required int districtId}) = _$_District;
+      required int provinceId}) = _$_District;
 
   @override
   String get nameTH;
@@ -198,7 +198,7 @@ abstract class _District implements District {
   @override
   int get id;
   @override
-  int get districtId;
+  int get provinceId;
   @override
   @JsonKey(ignore: true)
   _$DistrictCopyWith<_District> get copyWith =>

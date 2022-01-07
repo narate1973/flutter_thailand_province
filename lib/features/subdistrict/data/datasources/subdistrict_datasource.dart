@@ -7,17 +7,19 @@ abstract class SubdistrictDataSourceInterface {
 }
 
 class SubdistrictDataSource implements SubdistrictDataSourceInterface {
-  @override
-  Future<List<SubdistrictModel>> getAllSubdistricts() async =>
-      (await ThailandProvincesDatabase.db.rawQuery('SELECT * FROM districts'))
-          .map((e) => SubdistrictModel.fromJson(e))
-          .toList();
+  static const tableName = 'districts';
 
   @override
-  Future<List<SubdistrictModel>> getSubdistrictsFromDistrict(
-          int districtId) async =>
-      (await ThailandProvincesDatabase.db.query('districts',
-              where: 'amphure_id = ?', whereArgs: [districtId]))
-          .map((e) => SubdistrictModel.fromJson(e))
-          .toList();
+  Future<List<SubdistrictModel>> getAllSubdistricts() =>
+      ThailandProvincesDatabase.db
+          .query(tableName)
+          .then((value) => SubdistrictModel.fromJsonList(value));
+
+  @override
+  Future<List<SubdistrictModel>> getSubdistrictsFromDistrict(int districtId) =>
+      ThailandProvincesDatabase.db.query('districts',
+          where: 'amphure_id = ?',
+          whereArgs: [
+            districtId
+          ]).then((value) => SubdistrictModel.fromJsonList(value));
 }
