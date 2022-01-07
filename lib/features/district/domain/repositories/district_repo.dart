@@ -2,9 +2,9 @@ import 'package:thailand_province_phn/features/district/data/datasources/distric
 import 'package:thailand_province_phn/features/district/domain/entities/entities.dart';
 
 abstract class DistrictRepositoryInterface {
-  Future<dynamic> getByProvince(int provinceID);
-  Future<dynamic> getDBySubDistrict(String subDistrict);
+  Future<dynamic> getByProvinceID(int provinceID);
   Future<List<District>> getAll();
+  // Future<dynamic> getBySubDistrict(String subDistrict);
 }
 
 class DistrictRepository implements DistrictRepositoryInterface {
@@ -19,13 +19,13 @@ class DistrictRepository implements DistrictRepositoryInterface {
       .then((value) => District.fromListModel(value));
 
   @override
-  Future getByProvince(int provinceID) => _districtDatasource
+  Future getByProvinceID(int provinceID) => _districtDatasource
       .getByProvinceId(provinceID)
       .then((value) => District.fromListModel(value));
 
-  @override
-  Future getDBySubDistrict(String subDistrict) {
-    // TODO: implement getDBySubDistrict
-    throw UnimplementedError();
-  }
+  // @override
+  // Future getBySubDistrict(String subDistrict) {
+  //   // TODO: implement getBySubDistrict
+  //   throw UnimplementedError();
+  // }
 }

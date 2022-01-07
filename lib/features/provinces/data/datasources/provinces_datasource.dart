@@ -3,8 +3,6 @@ import 'package:thailand_province_phn/features/provinces/data/models/province/pr
 
 abstract class ProvincesDatasourceInterface {
   Future<List<ProvinceModel>> getAll();
-
-  Future<ProvinceModel> getByID(String provinceID);
 }
 
 class ProvincesDatasource implements ProvincesDatasourceInterface {
@@ -14,10 +12,4 @@ class ProvincesDatasource implements ProvincesDatasourceInterface {
   Future<List<ProvinceModel>> getAll() => ThailandProvincesDatabase.db
       .query(tableProvinces)
       .then((value) => ProvinceModel.fromJsonList(value));
-
-  @override
-  Future<ProvinceModel> getByID(String provinceID) {
-    // TODO: implement getByID
-    throw UnimplementedError();
-  }
 }

@@ -3,8 +3,8 @@ import 'package:thailand_province_phn/features/provinces/domain/entities/provice
 
 abstract class ProvinceRepositoryInterface {
   Future<List<Provice>> getAll();
-  Future<dynamic> getByDistrict(String district);
-  Future<dynamic> getBySubDistrict(String subDistrict);
+  // Future<dynamic> getByDistrict(String district);
+  // Future<dynamic> getBySubDistrict(String subDistrict);
 }
 
 class ProvinceRepository implements ProvinceRepositoryInterface {
@@ -18,15 +18,15 @@ class ProvinceRepository implements ProvinceRepositoryInterface {
       .getAll()
       .then((value) => Provice.fromListModel(value));
 
-  @override
-  Future getByDistrict(String district) {
-    // TODO: implement getByDistrict
-    throw UnimplementedError();
-  }
+  // @override
+  // Future getByDistrict(String district) {
+  //   // TODO: implement getByDistrict
+  //   throw UnimplementedError();
+  // }
 
-  @override
-  Future getBySubDistrict(String subDistrict) {
-    // TODO: implement getBySubDistrict
-    throw UnimplementedError();
-  }
+  // @override
+  // Future getBySubDistrict(String subDistrict) {
+  //   // TODO: implement getBySubDistrict
+  //   throw UnimplementedError();
+  // }
 }
