@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'province_model.freezed.dart';
+
 part 'province_model.g.dart';
 
 @freezed
@@ -13,4 +14,7 @@ class ProvinceModel with _$ProvinceModel {
 
   factory ProvinceModel.fromJson(Map<String, dynamic> json) =>
       _$ProvinceModelFromJson(json);
+
+  static List<ProvinceModel> fromJsonList(List<Map<String, dynamic>> list) =>
+      list.map((data) => ProvinceModel.fromJson(data)).toList();
 }

@@ -1,21 +1,22 @@
 import 'package:thailand_province_phn/core/database/thailand_provinces_data_base.dart';
+import 'package:thailand_province_phn/features/provinces/data/models/province/province_model.dart';
 
 abstract class ProvincesDatasourceInterface {
   Future<dynamic> getAll();
+
   Future<dynamic> getByID(String provinceID);
 }
 
 class ProvincesDatasource implements ProvincesDatasourceInterface {
+  static const String tableProvinces = "provinces";
+
   @override
   Future getAll() async {
-    String where;
-    List<dynamic> whereArgs;
+    List<Map<String, dynamic>> mapResult =
+        await ThailandProvincesDatabase.db.query(tableProvinces);
+    List<ProvinceModel> listProvince = ProvinceModel.fromJsonList(mapResult);
 
-    List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db
-        .query(TABLE_AMPHURES, where: where, whereArgs: whereArgs);
-    List<AmphureDao> listAmphures = mapAmphuresList(mapResult);
-
-    return listAmphures;
+    return listProvince;
   }
 
   @override

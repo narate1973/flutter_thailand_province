@@ -1,7 +1,7 @@
 abstract class ProvinceRepositoryInterface {
   Future<dynamic> getAll();
   Future<dynamic> getByDistrict(String district);
-  Future<dynamic> getBySubDistrict(String subdistrict);
+  Future<dynamic> getBySubDistrict(String subDistrict);
 }
 
 class ProvinceRepository implements ProvinceRepositoryInterface {
@@ -18,7 +18,7 @@ class ProvinceRepository implements ProvinceRepositoryInterface {
   }
 
   @override
-  Future getBySubDistrict(String subdistrict) {
+  Future getBySubDistrict(String subDistrict) {
     // TODO: implement getBySubDistrict
     throw UnimplementedError();
   }
