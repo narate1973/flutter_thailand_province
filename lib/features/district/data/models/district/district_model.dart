@@ -14,4 +14,7 @@ class DistrictModel with _$DistrictModel {
 
   factory DistrictModel.fromJson(Map<String, dynamic> json) =>
       _$DistrictModelFromJson(json);
+
+  static List<DistrictModel> fromJsonList(List<Map<String, dynamic>> list) =>
+      list.map((data) => DistrictModel.fromJson(data)).toList();
 }

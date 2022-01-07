@@ -9,6 +9,4 @@ class Provice with _$Provice {
     required String nameEN,
     required int id,
   }) = _Provice;
-
-  static List<Provice> fromModel()
 }
