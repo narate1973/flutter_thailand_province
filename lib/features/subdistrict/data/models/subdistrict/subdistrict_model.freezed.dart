@@ -23,10 +23,10 @@ class _$SubdistrictModelTearOff {
   const _$SubdistrictModelTearOff();
 
   _SubdistrictModel call(
-      {required String nameTH,
-      required String nameEN,
-      required int id,
-      required int districtId}) {
+      {@JsonKey(name: 'name_th') required String nameTH,
+      @JsonKey(name: 'name_en') required String nameEN,
+      @JsonKey(name: 'id') required int id,
+      @JsonKey(name: 'amphure_id') required int districtId}) {
     return _SubdistrictModel(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -45,9 +45,13 @@ const $SubdistrictModel = _$SubdistrictModelTearOff();
 
 /// @nodoc
 mixin _$SubdistrictModel {
+  @JsonKey(name: 'name_th')
   String get nameTH => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name_en')
   String get nameEN => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
   int get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amphure_id')
   int get districtId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -61,7 +65,11 @@ abstract class $SubdistrictModelCopyWith<$Res> {
   factory $SubdistrictModelCopyWith(
           SubdistrictModel value, $Res Function(SubdistrictModel) then) =
       _$SubdistrictModelCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call(
+      {@JsonKey(name: 'name_th') String nameTH,
+      @JsonKey(name: 'name_en') String nameEN,
+      @JsonKey(name: 'id') int id,
+      @JsonKey(name: 'amphure_id') int districtId});
 }
 
 /// @nodoc
@@ -108,7 +116,11 @@ abstract class _$SubdistrictModelCopyWith<$Res>
           _SubdistrictModel value, $Res Function(_SubdistrictModel) then) =
       __$SubdistrictModelCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call(
+      {@JsonKey(name: 'name_th') String nameTH,
+      @JsonKey(name: 'name_en') String nameEN,
+      @JsonKey(name: 'id') int id,
+      @JsonKey(name: 'amphure_id') int districtId});
 }
 
 /// @nodoc
@@ -154,21 +166,25 @@ class __$SubdistrictModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubdistrictModel implements _SubdistrictModel {
   _$_SubdistrictModel(
-      {required this.nameTH,
-      required this.nameEN,
-      required this.id,
-      required this.districtId});
+      {@JsonKey(name: 'name_th') required this.nameTH,
+      @JsonKey(name: 'name_en') required this.nameEN,
+      @JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'amphure_id') required this.districtId});
 
   factory _$_SubdistrictModel.fromJson(Map<String, dynamic> json) =>
       _$$_SubdistrictModelFromJson(json);
 
   @override
+  @JsonKey(name: 'name_th')
   final String nameTH;
   @override
+  @JsonKey(name: 'name_en')
   final String nameEN;
   @override
+  @JsonKey(name: 'id')
   final int id;
   @override
+  @JsonKey(name: 'amphure_id')
   final int districtId;
 
   @override
@@ -209,21 +225,26 @@ class _$_SubdistrictModel implements _SubdistrictModel {
 
 abstract class _SubdistrictModel implements SubdistrictModel {
   factory _SubdistrictModel(
-      {required String nameTH,
-      required String nameEN,
-      required int id,
-      required int districtId}) = _$_SubdistrictModel;
+          {@JsonKey(name: 'name_th') required String nameTH,
+          @JsonKey(name: 'name_en') required String nameEN,
+          @JsonKey(name: 'id') required int id,
+          @JsonKey(name: 'amphure_id') required int districtId}) =
+      _$_SubdistrictModel;
 
   factory _SubdistrictModel.fromJson(Map<String, dynamic> json) =
       _$_SubdistrictModel.fromJson;
 
   @override
+  @JsonKey(name: 'name_th')
   String get nameTH;
   @override
+  @JsonKey(name: 'name_en')
   String get nameEN;
   @override
+  @JsonKey(name: 'id')
   int get id;
   @override
+  @JsonKey(name: 'amphure_id')
   int get districtId;
   @override
   @JsonKey(ignore: true)
