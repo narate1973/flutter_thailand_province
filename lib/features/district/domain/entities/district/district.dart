@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:thailand_province_phn/features/district/data/models/district/district_model.dart';
 
 part 'district.freezed.dart';
 
@@ -10,4 +11,14 @@ class District with _$District {
     required int id,
     required int districtId,
   }) = _District;
+
+  static List<District> fromListModel(List<DistrictModel> list) =>
+      list.map((data) => District.fromModel(data)).toList();
+
+  factory District.fromModel(DistrictModel model) => District(
+        nameTH: model.nameTH,
+        nameEN: model.nameEN,
+        id: model.id,
+        districtId: model.districtId,
+      );
 }

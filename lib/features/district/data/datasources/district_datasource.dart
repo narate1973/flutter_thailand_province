@@ -4,23 +4,22 @@ import 'package:thailand_province_phn/features/district/data/models/district/dis
 abstract class DistrictDatasourceInterface {
   Future<List<DistrictModel>> getAll();
 
-  Future<DistrictModel> getById(int id);
+  Future<List<DistrictModel>> getByProvinceId(int provinceID);
 }
 
 class DistrictDatasource implements DistrictDatasourceInterface {
   static const String tableDistrict = "amphures";
 
   @override
-  Future<List<DistrictModel>> getAll() async {
-    final List<Map<String, dynamic>> mapResutl =
-        await ThailandProvincesDatabase.db.query(tableDistrict);
-    final List<DistrictModel> result = DistrictModel.fromJsonList(mapResutl);
-    return result;
-  }
+  Future<List<DistrictModel>> getAll() => ThailandProvincesDatabase.db
+      .query(tableDistrict)
+      .then((value) => DistrictModel.fromJsonList(value));
 
   @override
-  Future<DistrictModel> getById(int id) {
-    // TODO: implement getById
-    throw UnimplementedError();
-  }
+  Future<List<DistrictModel>> getByProvinceId(int provinceID) =>
+      ThailandProvincesDatabase.db.query(
+        tableDistrict,
+        where: "province_id = ?",
+        whereArgs: [provinceID],
+      ).then((value) => DistrictModel.fromJsonList(value));
 }

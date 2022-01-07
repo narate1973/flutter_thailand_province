@@ -11,13 +11,9 @@ class ProvincesDatasource implements ProvincesDatasourceInterface {
   static const String tableProvinces = "provinces";
 
   @override
-  Future<List<ProvinceModel>> getAll() async {
-    List<Map<String, dynamic>> mapResult =
-        await ThailandProvincesDatabase.db.query(tableProvinces);
-    List<ProvinceModel> listProvince = ProvinceModel.fromJsonList(mapResult);
-
-    return listProvince;
-  }
+  Future<List<ProvinceModel>> getAll() => ThailandProvincesDatabase.db
+      .query(tableProvinces)
+      .then((value) => ProvinceModel.fromJsonList(value));
 
   @override
   Future<ProvinceModel> getByID(String provinceID) {
