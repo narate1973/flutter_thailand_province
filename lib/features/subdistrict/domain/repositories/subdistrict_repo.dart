@@ -1,24 +1,30 @@
+import 'package:thailand_province_phn/features/subdistrict/data/datasources/subdistrict_datasource.dart';
+import 'package:thailand_province_phn/features/subdistrict/domain/entities/entities.dart';
+
 abstract class SubdistrictRepositoryInterface {
-  Future<dynamic> getByDistrict();
-  Future<dynamic> getByProvince();
-  Future<dynamic> getAll();
+  Future<List<Subdistrict>> getByDistrict(int districtId);
+  Future<List<Subdistrict>> getByProvince();
+  Future<List<Subdistrict>> getAll();
 }
 
 class SubdistrictRepository implements SubdistrictRepositoryInterface {
-  @override
-  Future getAll() {
-    // TODO: implement getAll
-    throw UnimplementedError();
-  }
+  SubdistrictRepository([SubdistrictDataSource? dataSource])
+      : _dataSource = dataSource ?? SubdistrictDataSource();
+
+  final SubdistrictDataSource _dataSource;
 
   @override
-  Future getByDistrict() {
-    // TODO: implement getByDistrict
-    throw UnimplementedError();
-  }
+  Future<List<Subdistrict>> getAll() => _dataSource
+      .getAllSubdistricts()
+      .then((value) => Subdistrict.fromListModel(value));
 
   @override
-  Future getByProvince() {
+  Future<List<Subdistrict>> getByDistrict(int districtId) => _dataSource
+      .getSubdistrictsFromDistrict(districtId)
+      .then((value) => Subdistrict.fromListModel(value));
+
+  @override
+  Future<List<Subdistrict>> getByProvince() {
     // TODO: implement getByProvince
     throw UnimplementedError();
   }

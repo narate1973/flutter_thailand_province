@@ -9,7 +9,7 @@ class District with _$District {
     required String nameTH,
     required String nameEN,
     required int id,
-    required int districtId,
+    required int provinceId,
   }) = _District;
 
   static List<District> fromListModel(List<DistrictModel> list) =>
@@ -19,6 +19,6 @@ class District with _$District {
         nameTH: model.nameTH,
         nameEN: model.nameEN,
         id: model.id,
-        districtId: model.districtId,
+        provinceId: model.province,
       );
 }

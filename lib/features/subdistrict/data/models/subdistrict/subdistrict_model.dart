@@ -17,6 +17,6 @@ class SubdistrictModel with _$SubdistrictModel {
   factory SubdistrictModel.fromJson(Map<String, dynamic> json) =>
       _$SubdistrictModelFromJson(json);
 
-  static List<SubdistrictModel> fromJsonList(List<dynamic> json) =>
-      json.map((data) => SubdistrictModel.fromJson(data)).toList();
+  static List<SubdistrictModel> fromJsonList(List<dynamic> jsonList) =>
+      jsonList.map((e) => SubdistrictModel.fromJson(e)).toList();
 }
