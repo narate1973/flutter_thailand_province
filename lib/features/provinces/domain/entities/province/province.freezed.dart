@@ -19,7 +19,7 @@ class _$ProvinceTearOff {
   const _$ProvinceTearOff();
 
   _Province call(
-      {required String nameTH, required String nameEN, required int id}) {
+      {required String nameTH, required String nameEN, required String id}) {
     return _Province(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -35,7 +35,7 @@ const $Province = _$ProvinceTearOff();
 mixin _$Province {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProvinceCopyWith<Province> get copyWith =>
@@ -46,7 +46,7 @@ mixin _$Province {
 abstract class $ProvinceCopyWith<$Res> {
   factory $ProvinceCopyWith(Province value, $Res Function(Province) then) =
       _$ProvinceCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id});
+  $Res call({String nameTH, String nameEN, String id});
 }
 
 /// @nodoc
@@ -75,7 +75,7 @@ class _$ProvinceCopyWithImpl<$Res> implements $ProvinceCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -85,7 +85,7 @@ abstract class _$ProvinceCopyWith<$Res> implements $ProvinceCopyWith<$Res> {
   factory _$ProvinceCopyWith(_Province value, $Res Function(_Province) then) =
       __$ProvinceCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id});
+  $Res call({String nameTH, String nameEN, String id});
 }
 
 /// @nodoc
@@ -115,7 +115,7 @@ class __$ProvinceCopyWithImpl<$Res> extends _$ProvinceCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -130,7 +130,7 @@ class _$_Province implements _Province {
   @override
   final String nameEN;
   @override
-  final int id;
+  final String id;
 
   @override
   String toString() {
@@ -164,14 +164,14 @@ abstract class _Province implements Province {
   factory _Province(
       {required String nameTH,
       required String nameEN,
-      required int id}) = _$_Province;
+      required String id}) = _$_Province;
 
   @override
   String get nameTH;
   @override
   String get nameEN;
   @override
-  int get id;
+  String get id;
   @override
   @JsonKey(ignore: true)
   _$ProvinceCopyWith<_Province> get copyWith =>

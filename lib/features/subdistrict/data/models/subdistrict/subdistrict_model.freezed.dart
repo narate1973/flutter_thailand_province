@@ -25,8 +25,8 @@ class _$SubdistrictModelTearOff {
   _SubdistrictModel call(
       {@JsonKey(name: 'name_th') required String nameTH,
       @JsonKey(name: 'name_en') required String nameEN,
-      @JsonKey(name: 'id') required int id,
-      @JsonKey(name: 'amphure_id') required int districtId}) {
+      @JsonKey(name: 'id') required String id,
+      @JsonKey(name: 'amphure_id') required String districtId}) {
     return _SubdistrictModel(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -50,9 +50,9 @@ mixin _$SubdistrictModel {
   @JsonKey(name: 'name_en')
   String get nameEN => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'amphure_id')
-  int get districtId => throw _privateConstructorUsedError;
+  String get districtId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -68,8 +68,8 @@ abstract class $SubdistrictModelCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
-      @JsonKey(name: 'id') int id,
-      @JsonKey(name: 'amphure_id') int districtId});
+      @JsonKey(name: 'id') String id,
+      @JsonKey(name: 'amphure_id') String districtId});
 }
 
 /// @nodoc
@@ -100,11 +100,11 @@ class _$SubdistrictModelCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       districtId: districtId == freezed
           ? _value.districtId
           : districtId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -119,8 +119,8 @@ abstract class _$SubdistrictModelCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
-      @JsonKey(name: 'id') int id,
-      @JsonKey(name: 'amphure_id') int districtId});
+      @JsonKey(name: 'id') String id,
+      @JsonKey(name: 'amphure_id') String districtId});
 }
 
 /// @nodoc
@@ -153,11 +153,11 @@ class __$SubdistrictModelCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       districtId: districtId == freezed
           ? _value.districtId
           : districtId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -182,10 +182,10 @@ class _$_SubdistrictModel implements _SubdistrictModel {
   final String nameEN;
   @override
   @JsonKey(name: 'id')
-  final int id;
+  final String id;
   @override
   @JsonKey(name: 'amphure_id')
-  final int districtId;
+  final String districtId;
 
   @override
   String toString() {
@@ -227,8 +227,8 @@ abstract class _SubdistrictModel implements SubdistrictModel {
   factory _SubdistrictModel(
           {@JsonKey(name: 'name_th') required String nameTH,
           @JsonKey(name: 'name_en') required String nameEN,
-          @JsonKey(name: 'id') required int id,
-          @JsonKey(name: 'amphure_id') required int districtId}) =
+          @JsonKey(name: 'id') required String id,
+          @JsonKey(name: 'amphure_id') required String districtId}) =
       _$_SubdistrictModel;
 
   factory _SubdistrictModel.fromJson(Map<String, dynamic> json) =
@@ -242,10 +242,10 @@ abstract class _SubdistrictModel implements SubdistrictModel {
   String get nameEN;
   @override
   @JsonKey(name: 'id')
-  int get id;
+  String get id;
   @override
   @JsonKey(name: 'amphure_id')
-  int get districtId;
+  String get districtId;
   @override
   @JsonKey(ignore: true)
   _$SubdistrictModelCopyWith<_SubdistrictModel> get copyWith =>

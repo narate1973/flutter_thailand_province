@@ -9,8 +9,8 @@ class Subdistrict with _$Subdistrict {
   factory Subdistrict({
     required String nameTH,
     required String nameEN,
-    required int id,
-    required int districtId,
+    required String id,
+    required String districtId,
   }) = _Subdistrict;
 
   factory Subdistrict.fromModel(SubdistrictModel model) {

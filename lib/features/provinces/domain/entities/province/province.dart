@@ -8,7 +8,7 @@ class Province with _$Province {
   factory Province({
     required String nameTH,
     required String nameEN,
-    required int id,
+    required String id,
   }) = _Province;
 
   static List<Province> fromListModel(List<ProvinceModel> list) =>

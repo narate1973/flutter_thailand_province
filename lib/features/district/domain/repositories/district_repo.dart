@@ -2,7 +2,7 @@ import 'package:thailand_province_phn/features/district/data/datasources/distric
 import 'package:thailand_province_phn/features/district/domain/entities/entities.dart';
 
 abstract class DistrictRepositoryInterface {
-  Future<List<District>> getByProvinceID(int provinceID);
+  Future<List<District>> getByProvinceID(String provinceID);
   Future<List<District>> getAll();
   // Future<dynamic> getBySubDistrict(String subDistrict);
 }
@@ -19,7 +19,7 @@ class DistrictRepository implements DistrictRepositoryInterface {
       .then((value) => District.fromListModel(value));
 
   @override
-  Future<List<District>> getByProvinceID(int provinceID) => _districtDatasource
+  Future<List<District>> getByProvinceID(String provinceID) => _districtDatasource
       .getByProvinceId(provinceID)
       .then((value) => District.fromListModel(value));
 

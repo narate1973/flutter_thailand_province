@@ -11,7 +11,7 @@ class ProvinceModel with _$ProvinceModel {
   factory ProvinceModel({
     @JsonKey(name: 'name_th') required String nameTH,
     @JsonKey(name: 'name_en') required String nameEN,
-    @JsonKey(name: 'id') required int id,
+    @JsonKey(name: 'id') required String id,
   }) = _ProvinceModel;
 
   factory ProvinceModel.fromJson(Map<String, dynamic> json) =>

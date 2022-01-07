@@ -21,8 +21,8 @@ class _$SubdistrictTearOff {
   _Subdistrict call(
       {required String nameTH,
       required String nameEN,
-      required int id,
-      required int districtId}) {
+      required String id,
+      required String districtId}) {
     return _Subdistrict(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -39,8 +39,8 @@ const $Subdistrict = _$SubdistrictTearOff();
 mixin _$Subdistrict {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
-  int get id => throw _privateConstructorUsedError;
-  int get districtId => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  String get districtId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SubdistrictCopyWith<Subdistrict> get copyWith =>
@@ -52,7 +52,7 @@ abstract class $SubdistrictCopyWith<$Res> {
   factory $SubdistrictCopyWith(
           Subdistrict value, $Res Function(Subdistrict) then) =
       _$SubdistrictCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call({String nameTH, String nameEN, String id, String districtId});
 }
 
 /// @nodoc
@@ -82,11 +82,11 @@ class _$SubdistrictCopyWithImpl<$Res> implements $SubdistrictCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       districtId: districtId == freezed
           ? _value.districtId
           : districtId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -98,7 +98,7 @@ abstract class _$SubdistrictCopyWith<$Res>
           _Subdistrict value, $Res Function(_Subdistrict) then) =
       __$SubdistrictCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id, int districtId});
+  $Res call({String nameTH, String nameEN, String id, String districtId});
 }
 
 /// @nodoc
@@ -130,11 +130,11 @@ class __$SubdistrictCopyWithImpl<$Res> extends _$SubdistrictCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       districtId: districtId == freezed
           ? _value.districtId
           : districtId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -153,9 +153,9 @@ class _$_Subdistrict implements _Subdistrict {
   @override
   final String nameEN;
   @override
-  final int id;
+  final String id;
   @override
-  final int districtId;
+  final String districtId;
 
   @override
   String toString() {
@@ -192,17 +192,17 @@ abstract class _Subdistrict implements Subdistrict {
   factory _Subdistrict(
       {required String nameTH,
       required String nameEN,
-      required int id,
-      required int districtId}) = _$_Subdistrict;
+      required String id,
+      required String districtId}) = _$_Subdistrict;
 
   @override
   String get nameTH;
   @override
   String get nameEN;
   @override
-  int get id;
+  String get id;
   @override
-  int get districtId;
+  String get districtId;
   @override
   @JsonKey(ignore: true)
   _$SubdistrictCopyWith<_Subdistrict> get copyWith =>

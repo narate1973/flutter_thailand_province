@@ -8,8 +8,8 @@ class District with _$District {
   factory District({
     required String nameTH,
     required String nameEN,
-    required int id,
-    required int provinceId,
+    required String id,
+    required String provinceId,
   }) = _District;
 
   static List<District> fromListModel(List<DistrictModel> list) =>

@@ -10,8 +10,8 @@ class DistrictModel with _$DistrictModel {
   factory DistrictModel({
     @JsonKey(name: 'name_th') required String nameTH,
     @JsonKey(name: 'name_en') required String nameEN,
-    @JsonKey(name: 'id') required int id,
-    @JsonKey(name: 'district_id') required int province,
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'district_id') required String province,
   }) = _DistrictModel;
 
   factory DistrictModel.fromJson(Map<String, dynamic> json) =>

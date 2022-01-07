@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:developer' as developer;
 
 import 'package:flutter/services.dart';
 import 'package:path/path.dart' as p;
@@ -20,7 +21,7 @@ class ThailandProvincesDatabase {
 
     if (!isDBExist) {
       // Copy from asset
-      ByteData data = await rootBundle.load(p.join("assets", "thailand.db"));
+      final data = await rootBundle.load("assets/thailand.db");
       List<int> bytes =
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 

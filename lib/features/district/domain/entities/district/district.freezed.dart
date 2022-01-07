@@ -21,8 +21,8 @@ class _$DistrictTearOff {
   _District call(
       {required String nameTH,
       required String nameEN,
-      required int id,
-      required int provinceId}) {
+      required String id,
+      required String provinceId}) {
     return _District(
       nameTH: nameTH,
       nameEN: nameEN,
@@ -39,8 +39,8 @@ const $District = _$DistrictTearOff();
 mixin _$District {
   String get nameTH => throw _privateConstructorUsedError;
   String get nameEN => throw _privateConstructorUsedError;
-  int get id => throw _privateConstructorUsedError;
-  int get provinceId => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  String get provinceId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DistrictCopyWith<District> get copyWith =>
@@ -51,7 +51,7 @@ mixin _$District {
 abstract class $DistrictCopyWith<$Res> {
   factory $DistrictCopyWith(District value, $Res Function(District) then) =
       _$DistrictCopyWithImpl<$Res>;
-  $Res call({String nameTH, String nameEN, int id, int provinceId});
+  $Res call({String nameTH, String nameEN, String id, String provinceId});
 }
 
 /// @nodoc
@@ -81,11 +81,11 @@ class _$DistrictCopyWithImpl<$Res> implements $DistrictCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       provinceId: provinceId == freezed
           ? _value.provinceId
           : provinceId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -95,7 +95,7 @@ abstract class _$DistrictCopyWith<$Res> implements $DistrictCopyWith<$Res> {
   factory _$DistrictCopyWith(_District value, $Res Function(_District) then) =
       __$DistrictCopyWithImpl<$Res>;
   @override
-  $Res call({String nameTH, String nameEN, int id, int provinceId});
+  $Res call({String nameTH, String nameEN, String id, String provinceId});
 }
 
 /// @nodoc
@@ -126,11 +126,11 @@ class __$DistrictCopyWithImpl<$Res> extends _$DistrictCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       provinceId: provinceId == freezed
           ? _value.provinceId
           : provinceId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -149,9 +149,9 @@ class _$_District implements _District {
   @override
   final String nameEN;
   @override
-  final int id;
+  final String id;
   @override
-  final int provinceId;
+  final String provinceId;
 
   @override
   String toString() {
@@ -188,17 +188,17 @@ abstract class _District implements District {
   factory _District(
       {required String nameTH,
       required String nameEN,
-      required int id,
-      required int provinceId}) = _$_District;
+      required String id,
+      required String provinceId}) = _$_District;
 
   @override
   String get nameTH;
   @override
   String get nameEN;
   @override
-  int get id;
+  String get id;
   @override
-  int get provinceId;
+  String get provinceId;
   @override
   @JsonKey(ignore: true)
   _$DistrictCopyWith<_District> get copyWith =>

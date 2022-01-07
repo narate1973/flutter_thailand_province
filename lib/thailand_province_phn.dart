@@ -8,6 +8,10 @@ import './features/subdistrict/domain/entities/subdistrict/subdistrict.dart';
 import 'features/district/domain/entities/district/district.dart';
 import 'features/provinces/domain/entities/province/province.dart';
 
+export './features/district/domain/entities/entities.dart';
+export './features/provinces/domain/entities/entities.dart';
+export './features/subdistrict/domain/entities/entities.dart';
+
 class ThailandProvinces {
   ThailandProvinces._();
 
@@ -15,7 +19,7 @@ class ThailandProvinces {
   static late DistrictRepository _districtRepository;
   static late ProvinceRepository _provinceRepository;
 
-  static void init() async {
+  static Future<void> init() async {
     await ThailandProvincesDatabase.init();
     _subdistrictRepository = SubdistrictRepository();
     _districtRepository = DistrictRepository();
@@ -26,11 +30,11 @@ class ThailandProvinces {
       _subdistrictRepository.getAll();
 
   static Future<List<Subdistrict>> getSubdistrictsFromDistrict(
-          int districtId) =>
+          String districtId) =>
       _subdistrictRepository.getByDistrict(districtId);
 
   static Future<List<Subdistrict>> getSubdistrictsFromProvince(
-      int provinceId) async {
+      String provinceId) async {
     final List<Subdistrict> subdistricts = [];
     final districts = await _districtRepository.getByProvinceID(provinceId);
     for (var district in districts) {
@@ -44,7 +48,7 @@ class ThailandProvinces {
   static Future<List<Province>> getAllProvinces() =>
       _provinceRepository.getAll();
 
-  static Future<List<District>> getDistrictsFromProvince(int provinceId) =>
+  static Future<List<District>> getDistrictsFromProvince(String provinceId) =>
       _districtRepository.getByProvinceID(provinceId);
 
   static Future<List<District>> getAllDistrict() =>

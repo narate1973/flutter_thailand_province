@@ -10,7 +10,7 @@ _$_ProvinceModel _$$_ProvinceModelFromJson(Map<String, dynamic> json) =>
     _$_ProvinceModel(
       nameTH: json['name_th'] as String,
       nameEN: json['name_en'] as String,
-      id: json['id'] as int,
+      id: json['id'] as String,
     );
 
 Map<String, dynamic> _$$_ProvinceModelToJson(_$_ProvinceModel instance) =>
