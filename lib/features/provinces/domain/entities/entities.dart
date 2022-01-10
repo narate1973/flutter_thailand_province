@@ -1,1 +1,1 @@
-export './entities.dart';
+export './province/province.dart';
