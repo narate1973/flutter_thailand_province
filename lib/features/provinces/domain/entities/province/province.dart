@@ -11,12 +11,13 @@ class Province with _$Province {
     required String id,
   }) = _Province;
 
-  static List<Province> fromListModel(List<ProvinceModel> list) =>
-      list.map((data) => Province.fromModel(data)).toList();
+  static List<Province> fromListModel(List<ProvinceModel> list) => list.map((data) => Province.fromModel(data)).toList();
 
   factory Province.fromModel(ProvinceModel model) => Province(
         nameTH: model.nameTH,
         nameEN: model.nameEN,
         id: model.id,
       );
+
+  factory Province.thai() => Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
 }
