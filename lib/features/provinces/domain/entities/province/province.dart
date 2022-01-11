@@ -19,5 +19,5 @@ class Province with _$Province {
         id: model.id,
       );
 
-  factory Province.thai() => Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
+  factory Province.bangkok() => Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
 }
