@@ -4,7 +4,7 @@ import 'package:thailand_province_phn/features/district/data/models/district/dis
 abstract class DistrictDatasourceInterface {
   Future<List<DistrictModel>> getAll();
 
-  Future<List<DistrictModel>> getByProvinceId(String provinceID);
+  Future<List<DistrictModel>> getByProvinceId(int provinceID);
 }
 
 class DistrictDatasource implements DistrictDatasourceInterface {
@@ -16,7 +16,7 @@ class DistrictDatasource implements DistrictDatasourceInterface {
       .then((value) => DistrictModel.fromJsonList(value));
 
   @override
-  Future<List<DistrictModel>> getByProvinceId(String provinceID) =>
+  Future<List<DistrictModel>> getByProvinceId(int provinceID) =>
       ThailandProvincesDatabase.db.query(
         tableDistrict,
         where: "province_id = ?",
