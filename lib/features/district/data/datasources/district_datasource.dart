@@ -20,6 +20,6 @@ class DistrictDatasource implements DistrictDatasourceInterface {
       ThailandProvincesDatabase.db.query(
         tableDistrict,
         where: "province_id = ?",
-        whereArgs: [provinceID],
+        whereArgs: ["$provinceID"],
       ).then((value) => DistrictModel.fromJsonList(value));
 }
