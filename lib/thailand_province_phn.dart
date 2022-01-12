@@ -30,13 +30,13 @@ class ThailandProvinces {
       _subdistrictRepository.getAll();
 
   static Future<List<Subdistrict>> getSubdistrictsFromDistrict(
-          int districtId) =>
-      _subdistrictRepository.getByDistrict(districtId);
+          String districtId) =>
+      _subdistrictRepository.getByDistrict(int.parse(districtId));
 
   static Future<List<Subdistrict>> getSubdistrictsFromProvince(
-      int provinceId) async {
+      String provinceId) async {
     final List<Subdistrict> subdistricts = [];
-    final districts = await _districtRepository.getByProvinceID(provinceId);
+    final districts = await _districtRepository.getByProvinceID(int.parse(provinceId));
     for (var district in districts) {
       final subdistrictsFromDistrict =
           await _subdistrictRepository.getByDistrict(int.parse(district.id));
