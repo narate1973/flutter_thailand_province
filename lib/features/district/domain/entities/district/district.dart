@@ -19,6 +19,6 @@ class District with _$District {
         nameTH: model.nameTH,
         nameEN: model.nameEN,
         id: model.id,
-        provinceId: model.province,
+        provinceId: model.provinceID,
       );
 }

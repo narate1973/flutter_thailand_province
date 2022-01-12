@@ -26,12 +26,12 @@ class _$SubdistrictModelTearOff {
       {@JsonKey(name: 'name_th') required String nameTH,
       @JsonKey(name: 'name_en') required String nameEN,
       @JsonKey(name: 'id') required String id,
-      @JsonKey(name: 'amphure_id') required String districtId}) {
+      @JsonKey(name: 'amphure_id') required String districtID}) {
     return _SubdistrictModel(
       nameTH: nameTH,
       nameEN: nameEN,
       id: id,
-      districtId: districtId,
+      districtID: districtID,
     );
   }
 
@@ -52,7 +52,7 @@ mixin _$SubdistrictModel {
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'amphure_id')
-  String get districtId => throw _privateConstructorUsedError;
+  String get districtID => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,7 +69,7 @@ abstract class $SubdistrictModelCopyWith<$Res> {
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
       @JsonKey(name: 'id') String id,
-      @JsonKey(name: 'amphure_id') String districtId});
+      @JsonKey(name: 'amphure_id') String districtID});
 }
 
 /// @nodoc
@@ -86,7 +86,7 @@ class _$SubdistrictModelCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? districtId = freezed,
+    Object? districtID = freezed,
   }) {
     return _then(_value.copyWith(
       nameTH: nameTH == freezed
@@ -101,9 +101,9 @@ class _$SubdistrictModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      districtId: districtId == freezed
-          ? _value.districtId
-          : districtId // ignore: cast_nullable_to_non_nullable
+      districtID: districtID == freezed
+          ? _value.districtID
+          : districtID // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -120,7 +120,7 @@ abstract class _$SubdistrictModelCopyWith<$Res>
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
       @JsonKey(name: 'id') String id,
-      @JsonKey(name: 'amphure_id') String districtId});
+      @JsonKey(name: 'amphure_id') String districtID});
 }
 
 /// @nodoc
@@ -139,7 +139,7 @@ class __$SubdistrictModelCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? districtId = freezed,
+    Object? districtID = freezed,
   }) {
     return _then(_SubdistrictModel(
       nameTH: nameTH == freezed
@@ -154,9 +154,9 @@ class __$SubdistrictModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      districtId: districtId == freezed
-          ? _value.districtId
-          : districtId // ignore: cast_nullable_to_non_nullable
+      districtID: districtID == freezed
+          ? _value.districtID
+          : districtID // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -169,7 +169,7 @@ class _$_SubdistrictModel implements _SubdistrictModel {
       {@JsonKey(name: 'name_th') required this.nameTH,
       @JsonKey(name: 'name_en') required this.nameEN,
       @JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'amphure_id') required this.districtId});
+      @JsonKey(name: 'amphure_id') required this.districtID});
 
   factory _$_SubdistrictModel.fromJson(Map<String, dynamic> json) =>
       _$$_SubdistrictModelFromJson(json);
@@ -185,11 +185,11 @@ class _$_SubdistrictModel implements _SubdistrictModel {
   final String id;
   @override
   @JsonKey(name: 'amphure_id')
-  final String districtId;
+  final String districtID;
 
   @override
   String toString() {
-    return 'SubdistrictModel(nameTH: $nameTH, nameEN: $nameEN, id: $id, districtId: $districtId)';
+    return 'SubdistrictModel(nameTH: $nameTH, nameEN: $nameEN, id: $id, districtID: $districtID)';
   }
 
   @override
@@ -201,7 +201,7 @@ class _$_SubdistrictModel implements _SubdistrictModel {
             const DeepCollectionEquality().equals(other.nameEN, nameEN) &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
-                .equals(other.districtId, districtId));
+                .equals(other.districtID, districtID));
   }
 
   @override
@@ -210,7 +210,7 @@ class _$_SubdistrictModel implements _SubdistrictModel {
       const DeepCollectionEquality().hash(nameTH),
       const DeepCollectionEquality().hash(nameEN),
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(districtId));
+      const DeepCollectionEquality().hash(districtID));
 
   @JsonKey(ignore: true)
   @override
@@ -228,7 +228,7 @@ abstract class _SubdistrictModel implements SubdistrictModel {
           {@JsonKey(name: 'name_th') required String nameTH,
           @JsonKey(name: 'name_en') required String nameEN,
           @JsonKey(name: 'id') required String id,
-          @JsonKey(name: 'amphure_id') required String districtId}) =
+          @JsonKey(name: 'amphure_id') required String districtID}) =
       _$_SubdistrictModel;
 
   factory _SubdistrictModel.fromJson(Map<String, dynamic> json) =
@@ -245,7 +245,7 @@ abstract class _SubdistrictModel implements SubdistrictModel {
   String get id;
   @override
   @JsonKey(name: 'amphure_id')
-  String get districtId;
+  String get districtID;
   @override
   @JsonKey(ignore: true)
   _$SubdistrictModelCopyWith<_SubdistrictModel> get copyWith =>

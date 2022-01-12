@@ -18,7 +18,7 @@ class Subdistrict with _$Subdistrict {
       nameTH: model.nameTH,
       nameEN: model.nameEN,
       id: model.id,
-      districtId: model.districtId,
+      districtId: model.districtID,
     );
   }
 

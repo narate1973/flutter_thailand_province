@@ -11,7 +11,7 @@ class SubdistrictModel with _$SubdistrictModel {
     @JsonKey(name: 'name_th') required String nameTH,
     @JsonKey(name: 'name_en') required String nameEN,
     @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'amphure_id') required String districtId,
+    @JsonKey(name: 'amphure_id') required String districtID,
   }) = _SubdistrictModel;
 
   factory SubdistrictModel.fromJson(Map<String, dynamic> json) =>

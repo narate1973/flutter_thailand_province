@@ -26,12 +26,12 @@ class _$DistrictModelTearOff {
       {@JsonKey(name: 'name_th') required String nameTH,
       @JsonKey(name: 'name_en') required String nameEN,
       @JsonKey(name: 'id') required String id,
-      @JsonKey(name: 'district_id') required String province}) {
+      @JsonKey(name: 'province_id') required String provinceID}) {
     return _DistrictModel(
       nameTH: nameTH,
       nameEN: nameEN,
       id: id,
-      province: province,
+      provinceID: provinceID,
     );
   }
 
@@ -51,8 +51,8 @@ mixin _$DistrictModel {
   String get nameEN => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'district_id')
-  String get province => throw _privateConstructorUsedError;
+  @JsonKey(name: 'province_id')
+  String get provinceID => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,7 +69,7 @@ abstract class $DistrictModelCopyWith<$Res> {
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
       @JsonKey(name: 'id') String id,
-      @JsonKey(name: 'district_id') String province});
+      @JsonKey(name: 'province_id') String provinceID});
 }
 
 /// @nodoc
@@ -86,7 +86,7 @@ class _$DistrictModelCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? province = freezed,
+    Object? provinceID = freezed,
   }) {
     return _then(_value.copyWith(
       nameTH: nameTH == freezed
@@ -101,9 +101,9 @@ class _$DistrictModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      province: province == freezed
-          ? _value.province
-          : province // ignore: cast_nullable_to_non_nullable
+      provinceID: provinceID == freezed
+          ? _value.provinceID
+          : provinceID // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -120,7 +120,7 @@ abstract class _$DistrictModelCopyWith<$Res>
       {@JsonKey(name: 'name_th') String nameTH,
       @JsonKey(name: 'name_en') String nameEN,
       @JsonKey(name: 'id') String id,
-      @JsonKey(name: 'district_id') String province});
+      @JsonKey(name: 'province_id') String provinceID});
 }
 
 /// @nodoc
@@ -139,7 +139,7 @@ class __$DistrictModelCopyWithImpl<$Res>
     Object? nameTH = freezed,
     Object? nameEN = freezed,
     Object? id = freezed,
-    Object? province = freezed,
+    Object? provinceID = freezed,
   }) {
     return _then(_DistrictModel(
       nameTH: nameTH == freezed
@@ -154,9 +154,9 @@ class __$DistrictModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      province: province == freezed
-          ? _value.province
-          : province // ignore: cast_nullable_to_non_nullable
+      provinceID: provinceID == freezed
+          ? _value.provinceID
+          : provinceID // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -169,7 +169,7 @@ class _$_DistrictModel implements _DistrictModel {
       {@JsonKey(name: 'name_th') required this.nameTH,
       @JsonKey(name: 'name_en') required this.nameEN,
       @JsonKey(name: 'id') required this.id,
-      @JsonKey(name: 'district_id') required this.province});
+      @JsonKey(name: 'province_id') required this.provinceID});
 
   factory _$_DistrictModel.fromJson(Map<String, dynamic> json) =>
       _$$_DistrictModelFromJson(json);
@@ -184,12 +184,12 @@ class _$_DistrictModel implements _DistrictModel {
   @JsonKey(name: 'id')
   final String id;
   @override
-  @JsonKey(name: 'district_id')
-  final String province;
+  @JsonKey(name: 'province_id')
+  final String provinceID;
 
   @override
   String toString() {
-    return 'DistrictModel(nameTH: $nameTH, nameEN: $nameEN, id: $id, province: $province)';
+    return 'DistrictModel(nameTH: $nameTH, nameEN: $nameEN, id: $id, provinceID: $provinceID)';
   }
 
   @override
@@ -200,7 +200,8 @@ class _$_DistrictModel implements _DistrictModel {
             const DeepCollectionEquality().equals(other.nameTH, nameTH) &&
             const DeepCollectionEquality().equals(other.nameEN, nameEN) &&
             const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.province, province));
+            const DeepCollectionEquality()
+                .equals(other.provinceID, provinceID));
   }
 
   @override
@@ -209,7 +210,7 @@ class _$_DistrictModel implements _DistrictModel {
       const DeepCollectionEquality().hash(nameTH),
       const DeepCollectionEquality().hash(nameEN),
       const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(province));
+      const DeepCollectionEquality().hash(provinceID));
 
   @JsonKey(ignore: true)
   @override
@@ -227,7 +228,7 @@ abstract class _DistrictModel implements DistrictModel {
           {@JsonKey(name: 'name_th') required String nameTH,
           @JsonKey(name: 'name_en') required String nameEN,
           @JsonKey(name: 'id') required String id,
-          @JsonKey(name: 'district_id') required String province}) =
+          @JsonKey(name: 'province_id') required String provinceID}) =
       _$_DistrictModel;
 
   factory _DistrictModel.fromJson(Map<String, dynamic> json) =
@@ -243,8 +244,8 @@ abstract class _DistrictModel implements DistrictModel {
   @JsonKey(name: 'id')
   String get id;
   @override
-  @JsonKey(name: 'district_id')
-  String get province;
+  @JsonKey(name: 'province_id')
+  String get provinceID;
   @override
   @JsonKey(ignore: true)
   _$DistrictModelCopyWith<_DistrictModel> get copyWith =>

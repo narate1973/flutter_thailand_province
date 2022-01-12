@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thailand_province_phn/core/database/thailand_provinces_data_base.dart';
 import 'package:thailand_province_phn/features/provinces/domain/entities/province/province.dart';
 import 'package:thailand_province_phn/thailand_province_phn.dart';
 
@@ -52,6 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemCount: snapshot.data?.length ?? 0,
                 itemBuilder: (context, index) {
                   return ListTile(
+                    onTap: () async {
+                      final district = await ThailandProvinces.getDistrictsFromProvince(snapshot.data![index].id);
+                      print('district => $district');
+                    },
                     title: Text('${index + 1} ${snapshot.data![index].nameEN}'),
                   );
                 },
