@@ -1,17 +1,18 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:thailand_province_phn/features/provinces/data/models/province/province_model.dart';
 
-part 'province.freezed.dart';
+class Province {
+  Province({
+    required this.nameTH,
+    required this.nameEN,
+    required this.id,
+  });
 
-@freezed
-class Province with _$Province {
-  factory Province({
-    required String nameTH,
-    required String nameEN,
-    required String id,
-  }) = _Province;
+  final String nameTH;
+  final String nameEN;
+  final String id;
 
-  static List<Province> fromListModel(List<ProvinceModel> list) => list.map((data) => Province.fromModel(data)).toList();
+  static List<Province> fromListModel(List<ProvinceModel> list) =>
+      list.map((data) => Province.fromModel(data)).toList();
 
   factory Province.fromModel(ProvinceModel model) => Province(
         nameTH: model.nameTH,
@@ -19,5 +20,6 @@ class Province with _$Province {
         id: model.id,
       );
 
-  factory Province.bangkok() => Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
+  factory Province.bangkok() =>
+      Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
 }

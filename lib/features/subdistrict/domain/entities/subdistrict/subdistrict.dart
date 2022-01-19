@@ -1,17 +1,17 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-
 import '../../../data/models/subdistrict/subdistrict_model.dart';
 
-part 'subdistrict.freezed.dart';
+class Subdistrict {
+  Subdistrict({
+    required this.nameTH,
+    required this.nameEN,
+    required this.id,
+    required this.districtId,
+  });
 
-@freezed
-class Subdistrict with _$Subdistrict {
-  factory Subdistrict({
-    required String nameTH,
-    required String nameEN,
-    required String id,
-    required String districtId,
-  }) = _Subdistrict;
+  final String nameTH;
+  final String nameEN;
+  final String id;
+  final String districtId;
 
   factory Subdistrict.fromModel(SubdistrictModel model) {
     return Subdistrict(

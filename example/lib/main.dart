@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:thailand_province_phn/core/database/thailand_provinces_data_base.dart';
 import 'package:thailand_province_phn/features/provinces/domain/entities/province/province.dart';
 import 'package:thailand_province_phn/thailand_province_phn.dart';
 

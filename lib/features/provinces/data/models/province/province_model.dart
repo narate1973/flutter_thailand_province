@@ -1,21 +1,23 @@
-// ignore_for_file: invalid_annotation_target
+class ProvinceModel {
+  ProvinceModel({
+    required this.nameTH,
+    required this.nameEN,
+    required this.id,
+  });
 
-import 'package:freezed_annotation/freezed_annotation.dart';
+  static const String nameTHField = 'name_th';
+  static const String nameENField = 'name_en';
+  static const String idField = 'id';
 
-part 'province_model.freezed.dart';
+  final String nameTH;
+  final String nameEN;
+  final String id;
 
-part 'province_model.g.dart';
-
-@freezed
-class ProvinceModel with _$ProvinceModel {
-  factory ProvinceModel({
-    @JsonKey(name: 'name_th') required String nameTH,
-    @JsonKey(name: 'name_en') required String nameEN,
-    @JsonKey(name: 'id') required String id,
-  }) = _ProvinceModel;
-
-  factory ProvinceModel.fromJson(Map<String, dynamic> json) =>
-      _$ProvinceModelFromJson(json);
+  factory ProvinceModel.fromJson(Map<String, dynamic> json) => ProvinceModel(
+        nameTH: json[nameTHField],
+        nameEN: json[nameENField],
+        id: json[idField],
+      );
 
   static List<ProvinceModel> fromJsonList(List<Map<String, dynamic>> list) =>
       list.map((data) => ProvinceModel.fromJson(data)).toList();

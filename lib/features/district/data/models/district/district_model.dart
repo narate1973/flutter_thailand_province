@@ -1,21 +1,27 @@
-// ignore_for_file: invalid_annotation_target
+class DistrictModel {
+  DistrictModel({
+    required this.nameTH,
+    required this.nameEN,
+    required this.id,
+    required this.provinceID,
+  });
 
-import 'package:freezed_annotation/freezed_annotation.dart';
+  final String nameTH;
+  final String nameEN;
+  final String id;
+  final String provinceID;
 
-part 'district_model.freezed.dart';
-part 'district_model.g.dart';
+  static const String nameTHField = 'name_th';
+  static const String nameENField = 'name_en';
+  static const String idField = 'id';
+  static const String provinceIDField = 'province_id';
 
-@freezed
-class DistrictModel with _$DistrictModel {
-  factory DistrictModel({
-    @JsonKey(name: 'name_th') required String nameTH,
-    @JsonKey(name: 'name_en') required String nameEN,
-    @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'province_id') required String provinceID,
-  }) = _DistrictModel;
-
-  factory DistrictModel.fromJson(Map<String, dynamic> json) =>
-      _$DistrictModelFromJson(json);
+  factory DistrictModel.fromJson(Map<String, dynamic> json) => DistrictModel(
+        nameTH: json[nameTHField],
+        nameEN: json[nameENField],
+        id: json[idField],
+        provinceID: json[provinceIDField],
+      );
 
   static List<DistrictModel> fromJsonList(List<Map<String, dynamic>> list) =>
       list.map((data) => DistrictModel.fromJson(data)).toList();

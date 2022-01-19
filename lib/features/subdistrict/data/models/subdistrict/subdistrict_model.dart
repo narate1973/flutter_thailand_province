@@ -1,21 +1,30 @@
-// ignore_for_file: invalid_annotation_target
 
-import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'subdistrict_model.freezed.dart';
-part 'subdistrict_model.g.dart';
+class SubdistrictModel {
+  SubdistrictModel({
+    required this.nameTH,
+    required this.nameEN,
+    required this.id,
+    required this.districtID,
+  });
 
-@freezed
-class SubdistrictModel with _$SubdistrictModel {
-  factory SubdistrictModel({
-    @JsonKey(name: 'name_th') required String nameTH,
-    @JsonKey(name: 'name_en') required String nameEN,
-    @JsonKey(name: 'id') required String id,
-    @JsonKey(name: 'amphure_id') required String districtID,
-  }) = _SubdistrictModel;
+  static const String nameTHField = 'name_th';
+  static const String nameENField = 'name_en';
+  static const String idField = 'id';
+  static const String amphureIDField = 'amphure_id';
+
+  final String nameTH;
+  final String nameEN;
+  final String id;
+  final String districtID;
 
   factory SubdistrictModel.fromJson(Map<String, dynamic> json) =>
-      _$SubdistrictModelFromJson(json);
+      SubdistrictModel(
+        nameTH: json[nameTHField],
+        nameEN: json[nameENField],
+        id: json[idField],
+        districtID: json[amphureIDField],
+      );
 
   static List<SubdistrictModel> fromJsonList(List<dynamic> jsonList) =>
       jsonList.map((e) => SubdistrictModel.fromJson(e)).toList();
