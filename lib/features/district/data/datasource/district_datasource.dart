@@ -28,11 +28,13 @@ class DistrictDatasource implements DistrictDatasourceInterface {
     if (provinceID == 1000000) {
       return [DistrictModel.selectDefault];
     } else {
-      return await ThailandProvincesDatabase.db.query(
+      var data = await ThailandProvincesDatabase.db.query(
         tableDistrict,
         where: "province_id = ?",
         whereArgs: ["$provinceID"],
       ).then((value) => DistrictModel.fromJsonList(value));
+      data.insert(0, DistrictModel.selectDefault);
+      return data;
     }
   }
 }

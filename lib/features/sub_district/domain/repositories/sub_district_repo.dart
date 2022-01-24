@@ -3,7 +3,7 @@ import 'package:thailand_province_phn/features/sub_district/domain/entities/enti
 
 abstract class SubDistrictRepositoryInterface {
   Future<List<SubDistrict>> getByDistrict(int districtId);
-  Future<List<SubDistrict>> getAll({bool selectDefault = false});
+  Future<List<SubDistrict>> getAll({required bool selectDefault});
 }
 
 class SubDistrictRepository implements SubDistrictRepositoryInterface {
@@ -13,7 +13,7 @@ class SubDistrictRepository implements SubDistrictRepositoryInterface {
   final SubDistrictDataSource _dataSource;
 
   @override
-  Future<List<SubDistrict>> getAll({bool selectDefault = false}) => _dataSource
+  Future<List<SubDistrict>> getAll({required bool selectDefault}) => _dataSource
       .getAllSubdistricts(selectDefault: selectDefault)
       .then((value) => SubDistrict.fromListModel(value));
 

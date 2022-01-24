@@ -29,11 +29,13 @@ class SubDistrictDataSource implements SubDistrictDataSourceInterface {
     if (districtId == 1000000) {
       return [SubDistrictModel.selectDefault];
     } else {
-      return await ThailandProvincesDatabase.db.query(
+      var data = await ThailandProvincesDatabase.db.query(
         tableName,
         where: "amphure_id = ?",
         whereArgs: ["$districtId"],
       ).then((value) => SubDistrictModel.fromJsonList(value));
+      data.insert(0, SubDistrictModel.selectDefault);
+      return data;
     }
   }
 }

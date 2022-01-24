@@ -3,7 +3,7 @@ import 'package:thailand_province_phn/features/provinces/data/datasource/provinc
 import '../entities/province/province.dart';
 
 abstract class ProvinceRepositoryInterface {
-  Future<List<Province>> getAll();
+  Future<List<Province>> getAll({required bool selectDefault});
   // Future<dynamic> getByDistrict(String district);
   // Future<dynamic> getBySubDistrict(String subDistrict);
 }
@@ -15,7 +15,7 @@ class ProvinceRepository implements ProvinceRepositoryInterface {
   final ProvincesDatasource _provincesDatasource;
 
   @override
-  Future<List<Province>> getAll({bool selectDefault = false}) => _provincesDatasource
+  Future<List<Province>> getAll({required bool selectDefault}) => _provincesDatasource
       .getAll(selectDefault: selectDefault)
       .then((value) => Province.fromListModel(value));
 }

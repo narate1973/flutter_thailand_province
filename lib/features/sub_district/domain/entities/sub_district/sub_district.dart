@@ -22,5 +22,8 @@ class SubDistrict {
     );
   }
 
-  static List<SubDistrict> fromListModel(List<SubDistrictModel> models) => models.map((model) => SubDistrict.fromModel(model)).toList();
+  static SubDistrict selectDefualt = SubDistrict.fromModel(SubDistrictModel.selectDefault);
+
+  static List<SubDistrict> fromListModel(List<SubDistrictModel> models) =>
+      models.map((model) => SubDistrict.fromModel(model)).toList();
 }

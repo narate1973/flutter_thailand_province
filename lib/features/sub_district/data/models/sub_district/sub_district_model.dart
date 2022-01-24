@@ -11,8 +11,8 @@ class SubDistrictModel {
   static const String idField = 'id';
   static const String amphureIDField = 'amphure_id';
 
-  static const String selectDefaultNameTH = 'Sub-district';
-  static const String selectDefaultNameEN = 'แขวง/ตำบล';
+  static const String selectDefaultNameEN = 'Sub-district';
+  static const String selectDefaultNameTH = 'แขวง/ตำบล';
 
   final String nameTH;
   final String nameEN;

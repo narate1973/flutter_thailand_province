@@ -16,6 +16,8 @@ class District {
   static List<District> fromListModel(List<DistrictModel> list) =>
       list.map((data) => District.fromModel(data)).toList();
 
+  static District selectDefault = District.fromModel(DistrictModel.selectDefault);
+
   factory District.fromModel(DistrictModel model) => District(
         nameTH: model.nameTH,
         nameEN: model.nameEN,

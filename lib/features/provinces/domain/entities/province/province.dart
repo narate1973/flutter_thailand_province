@@ -20,6 +20,7 @@ class Province {
         id: model.id,
       );
 
-  factory Province.bangkok() =>
-      Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
+  static Province selectDefault = Province.fromModel(ProvinceModel.selectDefault);
+
+  factory Province.bangkok() => Province(nameTH: 'กรุงเทพมหานคร', nameEN: 'Bangkok', id: '1');
 }

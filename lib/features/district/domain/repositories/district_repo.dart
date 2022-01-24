@@ -3,7 +3,7 @@ import 'package:thailand_province_phn/features/district/domain/entities/entities
 
 abstract class DistrictRepositoryInterface {
   Future<List<District>> getByProvinceID(int provinceID);
-  Future<List<District>> getAll({bool selectDefault = false});
+  Future<List<District>> getAll({required bool selectDefault});
 }
 
 class DistrictRepository implements DistrictRepositoryInterface {
@@ -13,7 +13,7 @@ class DistrictRepository implements DistrictRepositoryInterface {
   final DistrictDatasource _districtDatasource;
 
   @override
-  Future<List<District>> getAll({bool selectDefault = false}) => _districtDatasource
+  Future<List<District>> getAll({required bool selectDefault}) => _districtDatasource
       .getAll(selectDefault: selectDefault)
       .then((value) => District.fromListModel(value));
 

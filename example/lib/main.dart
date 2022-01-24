@@ -30,7 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Future<List<Province>> _onLoadProvinces() async => await ThailandProvinces.getAllProvinces();
+  Future<List<Province>> _onLoadProvinces() =>
+      ThailandProvinces.getAllProvinces(selectDefault: false);
 
   @override
   Widget build(BuildContext context) {
@@ -39,28 +40,30 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: FutureBuilder<List<Province>>(
-          future: _onLoadProvinces(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState != ConnectionState.done) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            return SizedBox.expand(
-              child: ListView.builder(
-                itemCount: snapshot.data?.length ?? 0,
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    onTap: () async {
-                      final district = await ThailandProvinces.getDistrictsFromProvince(snapshot.data![index].id);
-                      developer.log('district => $district');
-                    },
-                    title: Text('${index + 1} ${snapshot.data![index].nameEN}'),
-                  );
-                },
-              ),
+        future: _onLoadProvinces(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState != ConnectionState.done) {
+            return const Center(
+              child: CircularProgressIndicator(),
             );
-          }),
+          }
+          return SizedBox.expand(
+            child: ListView.builder(
+              itemCount: snapshot.data?.length ?? 0,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  onTap: () async {
+                    final district =
+                        await ThailandProvinces.getDistrictsFromProvince(snapshot.data![index].id);
+                    developer.log('district => $district');
+                  },
+                  title: Text('${index + 1} ${snapshot.data![index].nameEN}'),
+                );
+              },
+            ),
+          );
+        },
+      ),
     );
   }
 }
