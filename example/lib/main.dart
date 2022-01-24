@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:thailand_province_phn/features/provinces/domain/entities/province/province.dart';
 import 'package:thailand_province_phn/thailand_province_phn.dart';
+import 'dart:developer' as developer;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,8 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Future<List<Province>> _onLoadProvinces() async =>
-      await ThailandProvinces.getAllProvinces();
+  Future<List<Province>> _onLoadProvinces() async => await ThailandProvinces.getAllProvinces();
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   return ListTile(
                     onTap: () async {
                       final district = await ThailandProvinces.getDistrictsFromProvince(snapshot.data![index].id);
-                      print('district => $district');
+                      developer.log('district => $district');
                     },
                     title: Text('${index + 1} ${snapshot.data![index].nameEN}'),
                   );

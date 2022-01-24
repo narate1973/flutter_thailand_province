@@ -1,7 +1,5 @@
-
-
-class SubdistrictModel {
-  SubdistrictModel({
+class SubDistrictModel {
+  SubDistrictModel({
     required this.nameTH,
     required this.nameEN,
     required this.id,
@@ -18,14 +16,12 @@ class SubdistrictModel {
   final String id;
   final String districtID;
 
-  factory SubdistrictModel.fromJson(Map<String, dynamic> json) =>
-      SubdistrictModel(
+  factory SubDistrictModel.fromJson(Map<String, dynamic> json) => SubDistrictModel(
         nameTH: json[nameTHField],
         nameEN: json[nameENField],
         id: json[idField],
         districtID: json[amphureIDField],
       );
 
-  static List<SubdistrictModel> fromJsonList(List<dynamic> jsonList) =>
-      jsonList.map((e) => SubdistrictModel.fromJson(e)).toList();
+  static List<SubDistrictModel> fromJsonList(List<dynamic> jsonList) => jsonList.map((e) => SubDistrictModel.fromJson(e)).toList();
 }

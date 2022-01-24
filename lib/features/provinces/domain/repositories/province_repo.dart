@@ -1,4 +1,5 @@
-import '../../data/datasources/provinces_datasource.dart';
+import 'package:thailand_province_phn/features/provinces/data/datasource/provinces_datasource.dart';
+
 import '../entities/province/province.dart';
 
 abstract class ProvinceRepositoryInterface {
@@ -8,25 +9,10 @@ abstract class ProvinceRepositoryInterface {
 }
 
 class ProvinceRepository implements ProvinceRepositoryInterface {
-  ProvinceRepository({ProvincesDatasource? provincesDatasource})
-      : _provincesDatasource = provincesDatasource ?? ProvincesDatasource();
+  ProvinceRepository({ProvincesDatasource? provincesDatasource}) : _provincesDatasource = provincesDatasource ?? ProvincesDatasource();
 
   final ProvincesDatasource _provincesDatasource;
 
   @override
-  Future<List<Province>> getAll() => _provincesDatasource
-      .getAll()
-      .then((value) => Province.fromListModel(value));
-
-  // @override
-  // Future getByDistrict(String district) {
-  //   // TODO: implement getByDistrict
-  //   throw UnimplementedError();
-  // }
-
-  // @override
-  // Future getBySubDistrict(String subDistrict) {
-  //   // TODO: implement getBySubDistrict
-  //   throw UnimplementedError();
-  // }
+  Future<List<Province>> getAll() => _provincesDatasource.getAll().then((value) => Province.fromListModel(value));
 }
