@@ -16,6 +16,16 @@ class DistrictModel {
   static const String idField = 'id';
   static const String provinceIDField = 'province_id';
 
+  static const String selectDefaultNameTH = 'เขต/อำเภอ';
+  static const String selectDefaultNameEN = 'District';
+
+  static DistrictModel selectDefault = DistrictModel(
+    nameTH: selectDefaultNameTH,
+    nameEN: selectDefaultNameEN,
+    id: '1000000',
+    provinceID: '1000000',
+  );
+
   factory DistrictModel.fromJson(Map<String, dynamic> json) => DistrictModel(
         nameTH: json[nameTHField],
         nameEN: json[nameENField],

@@ -9,9 +9,18 @@ class ProvinceModel {
   static const String nameENField = 'name_en';
   static const String idField = 'id';
 
+  static const String selectDefaultNameTH = 'เลือกจังหวัด';
+  static const String selectDefaultNameEN = 'Select Province';
+
   final String nameTH;
   final String nameEN;
   final String id;
+
+  static ProvinceModel selectDefault = ProvinceModel(
+    nameTH: selectDefaultNameTH,
+    nameEN: selectDefaultNameEN,
+    id: '1000000',
+  );
 
   factory ProvinceModel.fromJson(Map<String, dynamic> json) => ProvinceModel(
         nameTH: json[nameTHField],

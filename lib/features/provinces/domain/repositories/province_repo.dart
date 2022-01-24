@@ -9,10 +9,13 @@ abstract class ProvinceRepositoryInterface {
 }
 
 class ProvinceRepository implements ProvinceRepositoryInterface {
-  ProvinceRepository({ProvincesDatasource? provincesDatasource}) : _provincesDatasource = provincesDatasource ?? ProvincesDatasource();
+  ProvinceRepository({ProvincesDatasource? provincesDatasource})
+      : _provincesDatasource = provincesDatasource ?? ProvincesDatasource();
 
   final ProvincesDatasource _provincesDatasource;
 
   @override
-  Future<List<Province>> getAll() => _provincesDatasource.getAll().then((value) => Province.fromListModel(value));
+  Future<List<Province>> getAll({bool selectDefault = false}) => _provincesDatasource
+      .getAll(selectDefault: selectDefault)
+      .then((value) => Province.fromListModel(value));
 }

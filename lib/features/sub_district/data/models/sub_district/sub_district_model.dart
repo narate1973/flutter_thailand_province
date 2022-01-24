@@ -11,10 +11,20 @@ class SubDistrictModel {
   static const String idField = 'id';
   static const String amphureIDField = 'amphure_id';
 
+  static const String selectDefaultNameTH = 'Sub-district';
+  static const String selectDefaultNameEN = 'แขวง/ตำบล';
+
   final String nameTH;
   final String nameEN;
   final String id;
   final String districtID;
+
+  static SubDistrictModel selectDefault = SubDistrictModel(
+    nameTH: selectDefaultNameTH,
+    nameEN: selectDefaultNameEN,
+    id: '1000000',
+    districtID: '1000000',
+  );
 
   factory SubDistrictModel.fromJson(Map<String, dynamic> json) => SubDistrictModel(
         nameTH: json[nameTHField],
@@ -23,5 +33,6 @@ class SubDistrictModel {
         districtID: json[amphureIDField],
       );
 
-  static List<SubDistrictModel> fromJsonList(List<dynamic> jsonList) => jsonList.map((e) => SubDistrictModel.fromJson(e)).toList();
+  static List<SubDistrictModel> fromJsonList(List<dynamic> jsonList) =>
+      jsonList.map((e) => SubDistrictModel.fromJson(e)).toList();
 }
